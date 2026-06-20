@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeartlessSieg — Projects</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --accent: #f97316;
+      --accent2: #fb923c;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --card-hover: #1c2128;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .avatar { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--accent); }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header h1 span { color: var(--accent); }
+    header p { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+    .badge {
+      margin-left: auto;
+      background: rgba(249,115,22,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(249,115,22,0.3);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .section-title {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.4rem; text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 0.6rem;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .card:hover { border-color: var(--accent); background: var(--card-hover); transform: translateY(-2px); }
+    .card:hover::before { opacity: 1; }
+    .card-header { display: flex; align-items: center; justify-content: space-between; }
+    .card-title { font-size: 1rem; font-weight: 600; }
+    .card-tag {
+      font-size: 0.7rem; padding: 2px 8px; border-radius: 12px;
+      background: rgba(249,115,22,0.1); color: var(--accent);
+      border: 1px solid rgba(249,115,22,0.2); font-weight: 500;
+    }
+    .card-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.5; flex: 1; }
+    .card-footer {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-top: 0.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border);
+    }
+    .lang-dot { width: 10px; height: 10px; border-radius: 50%; background: #e34c26; }
+    .lang-label { font-size: 0.78rem; color: var(--muted); }
+    .card-link { margin-left: auto; font-size: 0.78rem; color: var(--accent); display: flex; align-items: center; gap: 4px; }
+    footer {
+      text-align: center; padding: 2rem; color: var(--muted);
+      font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 3rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header>
+  <img class="avatar" src="https://avatars.githubusercontent.com/u/265885345?v=4" alt="HeartlessSieg" />
+  <div>
+    <h1>Heartless<span>Sieg</span></h1>
+    <p>Games · Apps · Tools — Built with Claude</p>
+  </div>
+  <span class="badge">6 Projects</span>
+</header>
+<main>
+  <p class="section-title">All Projects</p>
+  <div class="grid">
+    <a class="card" href="https://heartlesssieg.github.io/hare-escape" target="_blank">
+      <div class="card-header"><span class="card-title">🐇 Hare Escape</span><span class="card-tag">Game</span></div>
+      <p class="card-desc">The Hare Escape Game — help the hare find its way out.</p>
+      <div class="card-footer"><span class="lang-dot"></span><span class="lang-label">HTML</span><span class="card-link">Play ↗</span></div>
+    </a>
+    <a class="card" href="https://heartlesssieg.github.io/africa-chess" target="_blank">
+      <div class="card-header"><span class="card-title">♟️ Africa Chess</span><span class="card-tag">Game</span></div>
+      <p class="card-desc">African Kingdom Chess — a culturally inspired chess experience.</p>
+      <div class="card-footer"><span class="lang-dot"></span><span class="lang-label">HTML</span><span class="card-link">Play ↗</span></div>
+    </a>
+    <a class="card" href="https://heartlesssieg.github.io/savanna_invaders" target="_blank">
+      <div class="card-header"><span class="card-title">🦁 Savanna Invaders</span><span class="card-tag">Game</span></div>
+      <p class="card-desc">Space Invaders, but set in the Savanna. Defend against the wild!</p>
+      <div class="card-footer"><span class="lang-dot"></span><span class="lang-label">HTML</span><span class="card-link">Play ↗</span></div>
+    </a>
+    <a class="card" href="https://heartlesssieg.github.io/princess-unicorn" target="_blank">
+      <div class="card-header"><span class="card-title">🦄 Princess & Unicorn</span><span class="card-tag">Game</span></div>
+      <p class="card-desc">Princess and Unicorn must rescue all the knights from the Evil King!</p>
+      <div class="card-footer"><span class="lang-dot"></span><span class="lang-label">HTML</span><span class="card-link">Play ↗</span></div>
+    </a>
+    <a class="card" href="https://heartlesssieg.github.io/Becoming_App" target="_blank">
+      <div class="card-header"><span class="card-title">🌱 Becoming App</span><span class="card-tag">App</span></div>
+      <p class="card-desc">A simple life-changing app for everyone who wants to use it.</p>
+      <div class="card-footer"><span class="lang-dot"></span><span class="lang-label">HTML</span><span class="card-link">Open ↗</span></div>
+    </a>
+    <a class="card" href="https://heartlesssieg.github.io/africa-data" target="_blank">
+      <div class="card-header"><span class="card-title">📊 Africa Data</span><span class="card-tag">Tool</span></div>
+      <p class="card-desc">Organizing African SME data to help fight poverty more effectively.</p>
+      <div class="card-footer"><span class="lang-dot"></span><span class="lang-label">HTML</span><span class="card-link">Open ↗</span></div>
+    </a>
+  </div>
+</main>
+<footer>
+  <p>Built by <a href="https://github.com/HeartlessSieg" target="_blank">HeartlessSieg</a> · Managed with Claude · <a href="https://github.com/HeartlessSieg" target="_blank">View on GitHub</a></p>
+</footer>
+</body>
+</html>
